@@ -1,0 +1,50 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(9, 50px);
+  grid-template-rows: repeat(9, 50px);
+}
+
+.cell {
+  border: 1px solid #333;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+}
+
+.cell.bottom-border {
+  border-bottom: 2px solid black;
+}
+
+.cell.right-border {
+  border-right: 2px solid black;
+}
+
+.cell:focus {
+  outline: 0;
+  background-color: #cefafa;
+}
+
+.cell.correct {
+  background-color: #cefadd;
+  color: rgb(14, 143, 14);
+  border-color: rgb(14, 143, 14);
+}
+
+.cell.incorrect {
+  background-color: rgb(255, 190, 190);
+  border-color: maroon;
+  color: maroon;
+}
+
+/* if cell idx is #3 or #6 in row */
+/* if cell.x is 3 or 6, then border-bottom is black */
+/* if cell.y is 3 or 6, then border-right is black */
